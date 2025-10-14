@@ -11,7 +11,7 @@ export class Enemigo {
         this.hp=hp;
     }
     action(){
-        return `${this.type} ${this.name} ${this.levelAtaque} ${this.hp}`;
+        return `Tipo: ${this.type} Nombre: ${this.name} Nivel de ataque:  ${this.levelAtaque} Puntos de vida: ${this.hp}`;
     }
     }
 
