@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export class Enemigo {
     type;
@@ -30,3 +31,5 @@ export class Enemigo {
         return `Soy ${this.name}. Habilidad especial: ${this.specialSkill}. Daño multiplicado por ${this.multiplierDamage}.`;
     }
 }
+=======
+>>>>>>> parent of 57bda1b (formularioJSP)
