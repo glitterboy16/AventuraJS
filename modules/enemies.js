@@ -18,7 +18,7 @@ export class Enemigo {
     export class JefeFinal extends Enemigo {
     specialSkill;
     multiplierDamage;
-    constructor(name,levelAtaque,hp,pecialSkill,multiplierDamage=2 ){
+    constructor(name,levelAtaque,hp,pecialSkill,multiplierDamage=1.3 ){
         super(name,levelAtaque,hp)
         this.type= 'Jefe';
         this.pecialSkill=pecialSkill;
@@ -27,10 +27,6 @@ export class Enemigo {
     }
 
     action(){
-        return `Soy  ${this.name}. El enemigo tiene una habilidad especial :  ${this.pecialSkill} `;
+        return `Soy  ${this.name}. Habilidad especial :  ${this.pecialSkill} `;
     }
-    ataquePotenciado(){
-        return this.levelAtaque * this.multiplierDamage;
-    }
-
 }
