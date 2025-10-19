@@ -1,5 +1,3 @@
-
-
 export class Enemigo {
     type;
     name;
@@ -13,18 +11,18 @@ export class Enemigo {
         this.hp=hp;
     }
     action(){
-        return `Tipo: ${this.type} | Nombre: ${this.name} | Nivel de ataque: ${this.levelAtaque} | Puntos de vida: ${this.hp}`;    }
+        return `Tipo: ${this.type} | Nombre: ${this.name} | Nivel de ataque: ${this.levelAtaque} | Puntos de vida: ${this.hp}`;    
     }
+}
 
-    export class JefeFinal extends Enemigo {
+export class JefeFinal extends Enemigo {
     specialSkill;
     multiplierDamage;
-    constructor(name,levelAtaque,hp,pecialSkill,multiplierDamage=1.3 ){
+    constructor(name,levelAtaque,hp,specialSkill,multiplierDamage=1.3 ){
         super(name,levelAtaque,hp)
         this.type= 'Jefe';
-        this.pecialSkill=pecialSkill;
+        this.specialSkill=pecialSkill;
         this.multiplierDamage=this.multiplierDamage;
-        
     }
 
     action(){
