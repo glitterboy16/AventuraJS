@@ -85,7 +85,7 @@ export class Player {
         this.inventory = this.inventory.filter(product => product !== item);
 
         // Mensaje genérico
-        return `Has usado ${item.name} y ${stat === 'hp' ? 'recuperas' : 'tu ' + stat + ' aumenta en'} ${bonusApplied} (${stat.charAt(0).toUpperCase() + stat.slice(1)} actual: ${this[stat]})`;
+        return `Has usado ${item.name} y has ganado +${bonusApplied} ${stat}.`;
     }
 
     // Ahora, los métodos específicos solo llaman al genérico
