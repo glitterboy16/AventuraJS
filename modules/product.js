@@ -57,7 +57,7 @@ export class Product {
      * 
      * @returns {void}
      */
-    find() {
+    info() {
         const formatPrice = (this.price / 100).toFixed(2).replace('.', ',') + '€';
         return `Nombre: ${this.name} Precio: ${formatPrice} Rareza: ${this.rarity} Tipo: ${this.type} Bonus: ${this.bonus}`;
     }

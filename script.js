@@ -1,5 +1,5 @@
 import { Enemigo, JefeFinal } from "./modules/enemies.js";
-import { market, show, applyDiscount, filterMarket } from "./modules/market.js";
+import { market, showProductInfo, applyDiscount, filterMarket, search } from "./modules/market.js";
 import { Product } from "./modules/product.js";
 import { categogorizePlayers, rankPlayers } from "./modules/ranking.js";
 import { battle } from "./modules/battle.js";
@@ -28,27 +28,25 @@ JefeFinales.forEach(j => console.log(j.action()));
 
 
 //enseñar mercado
-console.log("Inicio Mercado");
-market.forEach(product => {
-    console.log(show(product)); // usamos la función show() para mostrar info
-});
+console.log("\n=== Inicio del Mercado ===");
+market.forEach(product => console.log(showProductInfo(product)));
 
 //descuento a legendarios
 console.log("\n=== Aplicando 10% de descuento a productos Legendarios ===");
 const discountedMarket = applyDiscount(market, "Legendaria", 10);
-discountedMarket.forEach(product => console.log(show(product)));
+discountedMarket.forEach(product => console.log(showProductInfo(product)));
 
 // Filtrar por rareza legendaria
-const epicProducts = filterMarket("Legendaria", market);
 console.log("\n=== Productos Legendarios ===");
-epicProducts.forEach(product => console.log(show(product)));
+const legendaryProducts = filterMarket("Legendaria", market);
+legendaryProducts.forEach(product => console.log(showProductInfo(product)));
 
 // Buscar un producto especifico
-const espada = find(market, "Espada del Gladiador");
-console.log("\n=== Buscando Espada del Gladiador ===");
+console.log("\n=== Buscando 'Espada del Gladiador' ===");
+const espada = search(market, "Espada del Gladiador");
 if (espada) {
-    console.log(show(espada));
+    console.log(showProductInfo(espada));
 } else {
-    console.log("Producto no encontrado");
+    console.log("Producto no encontrado.");
 }
 

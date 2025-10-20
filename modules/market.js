@@ -40,7 +40,7 @@ export function filterMarket(rarity, market) {
  * @returns {Product|undefined} El producto encontrado o `undefined` si no existe.
  */
 export function search(market, name) {
-    return market.find(product => product.name === name);
+    return market.find(product => product.name.toLowerCase() === name.toLowerCase());
 }
 
 /**
@@ -59,6 +59,6 @@ export function applyDiscount(market, rarity, percent) {
  * @param {Product} name - Instancia del producto a presentar.
  * @returns {string} Representación textual del producto.
  */
-export function show(name) {
-    return name.find();
+export function showProductInfo(product) {
+    return product.info();
 }
