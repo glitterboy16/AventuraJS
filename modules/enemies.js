@@ -21,7 +21,7 @@ export class JefeFinal extends Enemigo {
     constructor(name,levelAtaque,hp,specialSkill,multiplierDamage=1.3 ){
         super(name,levelAtaque,hp)
         this.type= 'Jefe';
-        this.specialSkill=pecialSkill;
+        this.specialSkill=specialSkill;
         this.multiplierDamage=this.multiplierDamage;
     }
 

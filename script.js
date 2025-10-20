@@ -1,6 +1,8 @@
-import { Enemigo, JefeFinal } from "./modules/enemies";
-import { market } from "./modules/market.js";
+import { Enemigo, JefeFinal } from "./modules/enemies.js";
+import { market, show, applyDiscount, filterMarket } from "./modules/market.js";
 import { Product } from "./modules/product.js";
+import { categogorizePlayers, rankPlayers } from "./modules/ranking.js";
+import { battle } from "./modules/battle.js";
 
 // creacion de enemigos
 const Enemigos =[
@@ -42,7 +44,7 @@ console.log("\n=== Productos Legendarios ===");
 epicProducts.forEach(product => console.log(show(product)));
 
 // Buscar un producto especifico
-const espada = search(market, "Espada del Gladiador");
+const espada = find(market, "Espada del Gladiador");
 console.log("\n=== Buscando Espada del Gladiador ===");
 if (espada) {
     console.log(show(espada));

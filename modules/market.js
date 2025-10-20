@@ -50,7 +50,7 @@ export function search(market, name) {
  * @param {string} type - Tipo de producto (por ejemplo, "Arma", "Armadura", "Accesorio").
  */
 export function applyDiscount(market, rarity, percent) {
-    return market.map(product => product.rarity === rarity ? product.applyDiscount(percent) : product);
+    return market.map(product => product.rarity === rarity ? product.discount(percent) : product);
 }
 
 /**
@@ -60,5 +60,5 @@ export function applyDiscount(market, rarity, percent) {
  * @returns {string} Representación textual del producto.
  */
 export function show(name) {
-    return name.presentar();
+    return name.find();
 }
