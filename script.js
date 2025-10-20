@@ -1,5 +1,30 @@
+import { Enemigo, JefeFinal } from "./modules/enemies";
 import { market } from "./modules/market.js";
 import { Product } from "./modules/product.js";
+
+// creacion de enemigos
+const Enemigos =[
+    new Enemigo('enemigo', 'Goblin', 3, 30),
+    new Enemigo('enemigo', 'Orco', 5, 50),
+    new Enemigo('enemigo', 'Bandido', 6, 60)
+
+
+
+]
+
+//crear const enemigo va ser una lista 
+const JefeFinales=[
+    new JefeFinal('Dragón', 10, 200, 'Aliento de fuego'),
+    new JefeFinal('Nigromante', 8, 150, 'Invocación de esqueletos', 3)
+
+];
+
+// mostart datos
+Enemigos.forEach(e => console.log(e.action()));
+JefeFinales.forEach(j => console.log(j.action()));
+
+
+
 //enseñar mercado
 console.log("Inicio Mercado");
 market.forEach(product => {
