@@ -1,5 +1,5 @@
 
-
+//clase enemigo 
 export class Enemigo {
     type;
     name;
