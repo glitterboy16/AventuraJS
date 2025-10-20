@@ -1,6 +1,7 @@
 import { Enemigo, JefeFinal } from "./modules/enemies";
 
 // creacion de enemigos
+
 const Enemigos = [
     new Enemigo('enemigo', 'Goblin', 3, 30),
     new Enemigo('enemigo', 'Orco', 5, 50),
